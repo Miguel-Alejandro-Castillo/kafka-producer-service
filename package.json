@@ -1,0 +1,31 @@
+{
+  "name": "kafka-producer-service",
+  "version": "1.0.0",
+  "description": "REST API service for producing Kafka messages using Fastify.",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node --test test/**/*.test.js",
+    "dev": "dotenv -e .env.development -- fastify start -w -l info -P app.js",
+    "start": "dotenv -e .env.production -- fastify start -l info -P app.js"
+  },
+  "keywords": ["fastify", "kafka producer", "api rest", "nodejs", "swagger", "microservices"],
+  "author": "Miguel Castillo",
+  "license": "MIT",
+  "dependencies": {
+    "@fastify/autoload": "^6.0.0",
+    "@fastify/sensible": "^6.0.0",
+    "@fastify/swagger": "^9.5.1",
+    "@fastify/swagger-ui": "^5.2.3",
+    "dotenv": "^17.2.2",
+    "fastify": "^5.0.0",
+    "fastify-cli": "^7.4.0",
+    "fastify-plugin": "^5.0.0",
+    "kafkajs": "^2.2.4"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^10.0.0"
+  }
+}
