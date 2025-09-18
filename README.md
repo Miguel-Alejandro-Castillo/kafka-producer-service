@@ -87,3 +87,7 @@ For more details and to test the API interactively, visit the [Swagger UI](http:
 ## Learn More
 
 To learn Fastify, check out the [Fastify documentation](https://fastify.dev/docs/latest/).
+
+---
+
+Thank you for using the Kafka Producer API! We hope it helps you build amazing applications. 🚀
