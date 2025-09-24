@@ -1,0 +1,24 @@
+services:
+  kafkaproducerservice:
+    container_name: kafka-producer-service
+    image: fastify/kafka-producer-service:1.0.0
+    build:
+      context: .
+      dockerfile: ./Dockerfile.dev
+    ports:
+      - 3000:3000
+      - 9229:9229
+    env_file: .env.dev
+    volumes:
+      - .:/usr/src/app # Sincroniza el código local con el contenedor
+      - /usr/src/app/node_modules # Evita sobrescribir node_modules
+    environment:
+      NODE_ENV: development
+      KAFKA_BROKER: kafka-broker:9092
+    #command: ["node", "--inspect=0.0.0.0:9229", "app.js"]
+    #command: ["npm", "run", "dev"]
+    networks:
+      - kafka-network
+networks:
+  kafka-network:
+    external: true

@@ -8,8 +8,8 @@
   },
   "scripts": {
     "test": "node --test test/**/*.test.js",
-    "dev": "dotenv -e .env.development -- fastify start -w -l info -P app.js",
-    "start": "dotenv -e .env.production -- fastify start -l info -P app.js"
+    "dev": "dotenv -e .env.dev -- fastify start -w -l info -P app.js",
+    "start": "dotenv -e .env.prod -- fastify start -l info -P app.js"
   },
   "keywords": ["fastify", "kafka producer", "api rest", "nodejs", "swagger", "microservices"],
   "author": "Miguel Castillo",

@@ -5,24 +5,52 @@ REST API service for producing Kafka messages using Fastify.
 
 To install the project dependencies, run:
 
-### `npm install`
+```bash
+npm install
+```
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm run dev`
+```bash
+npm run dev
+```
 
 To start the app in dev mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### `npm start`
+```bash
+npm run start
+```
 
 For production mode
 
-### `npm run test`
+```bash
+npm run test
+```
 
 Run the test cases.
+
+## Running the Application with Docker
+This project includes Docker Compose files for running the application in both development and production modes.
+
+### **1. Development Mode**
+
+To build and run the application in development mode, use the following command:
+```bash
+docker compose -f docker-compose.dev.yaml up -d
+```
+This will:
+* Build the Docker image (if not already built).
+* Start the application in development mode.
+* Expose the API at [http://localhost:3000](http://localhost:3000).
+
+To stop the application, run:
+```bash
+docker compose -f docker-compose.dev.yaml stop
+```
+
 
 ## API Documentation with [Swagger](https://github.com/fastify/fastify-swagger-ui)
 This project includes Swagger for comprehensive API documentation.  
