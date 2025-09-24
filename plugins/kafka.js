@@ -4,7 +4,10 @@ const { Kafka } = require('kafkajs');
 async function kafkaPlugin(fastify, opts) {
   const kafka = new Kafka({
     clientId: 'fastify-producer',
-    brokers: [process.env.KAFKA_BROKER]
+    brokers: [process.env.KAFKA_BROKER],
+    retry: {
+      retries: 0
+    }
   });
 
   const producer = kafka.producer();
