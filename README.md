@@ -50,6 +50,13 @@ To stop the application, run:
 ```bash
 docker compose -f docker-compose.dev.yaml stop
 ```
+### Additional Docker Commands
+
+For a complete list of Docker commands used across all projects—including build, restart, logs, cleanup, and container access—please refer to the shared Docker guide:
+
+👉 [View README.docker.md](https://github.com/Miguel-Alejandro-Castillo/kafka-infra/blob/master/README.Docker.md)
+
+This centralized file is maintained across all projects to ensure consistency and up-to-date instructions.
 
 
 ## API Documentation with [Swagger](https://github.com/fastify/fastify-swagger-ui)
