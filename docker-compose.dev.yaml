@@ -8,7 +8,7 @@ services:
     ports:
       - 3000:3000
       - 9229:9229
-    env_file: .env.dev
+    env_file: ./.env.dev
     volumes:
       - .:/usr/src/app # Sincroniza el código local con el contenedor
       - /usr/src/app/node_modules # Evita sobrescribir node_modules
